@@ -1,5 +1,6 @@
 import Header from "./components/header"
-import React, { useState, useEffect } from "react";import "primereact/resources/primereact.css";
+import React, { useState, useEffect } from "react";
+import "primereact/resources/primereact.css";
 import "primeicons/primeicons.css";
 import "primereact/resources/themes/tailwind-light/theme.css"
 function App() {

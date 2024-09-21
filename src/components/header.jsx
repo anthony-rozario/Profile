@@ -1,7 +1,5 @@
 import { Name } from "./MetaData";
-import { Button } from 'primereact/button';
-// import MenuBar from "./HeaderComponents/MenuBar";
-// import InboxButton from "./HeaderComponents/InboxButton";
+
 function Header() {
 
   const Iconstyles= "text-[#848D99] p-2";
