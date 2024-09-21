@@ -1,47 +1,63 @@
-import {Name} from "./MetaData"
-
+import { Name } from "./MetaData";
+import { Button } from 'primereact/button';
+// import MenuBar from "./HeaderComponents/MenuBar";
+// import InboxButton from "./HeaderComponents/InboxButton";
 function Header() {
+
+  const Iconstyles= "text-[#848D99] p-2";
   return (
-    <>
-      <div className="justify-between flex px-[2vw] py-[1vh] shadow-lg z-10 items-center text-slate-50">
-        <a href="/">
-          <h1 className="font-sans uppercase font-semibold text-lg  items-center">
-          {Name}
-          </h1>
-        </a>
+    <div className="bg-[#010508] border-b border-b-[#31363C]">
+      <div className="justify-between flex px-4 py-3 items-center text-[#E6ECF2] pt-4">
+        <div className="flex gap-4 items-center">
+         {/* <MenuBar /> */}
+         <button className="text-sm flex border text-[#848D99] border-[#31363C] rounded-md p-2 justify-center ">
+        <i className="pi pi-bars" />
+      </button>
 
-        <div className="flex gap-6 ">
-        <a href="" className="hover:text-slate-300">Home</a>
-        <a href="" className="hover:text-slate-300">Projects</a>
-        <a href="" className="hover:text-slate-300">About</a>
-        <a href="" className="hover:text-slate-300">Contact</a>
-        </div>
-
-        {/* Social media links  */}
-        <div className="flex gap-6">
-          <div className="flex text-2xl gap-2 items-center">
-            <a href="http://" target="_blank" rel="noopener noreferrer">
-              <i className="pi pi-instagram" />
-            </a>
-            <a href="http://" target="_blank" rel="noopener noreferrer">
-              <i className="pi pi-linkedin" />
-            </a>
-            <a href="http://" target="_blank" rel="noopener noreferrer">
-              <i className="pi pi-twitter" />
-            </a>
-            <a href={`http://`} target="_blank" rel="noopener noreferrer">
-              <i className="pi pi-github" />
+          <div className="flex gap-4 items-center">
+            <a href="https://github.com/4nth0nyr0zar10" className="pi pi-github text-3xl" />
+            <a className="font-sans font-semibold text-sm items-center" href="/">
+              {Name}
             </a>
           </div>
-          {/* social media links ends */}
+        </div>
 
-        {/* Resume downloads */}
-          <a className="px-4 py-2 border-2 border-slate-300 bg-slate-950">
-            Resume <i className="pi pi-download"></i>
-          </a>
+        <div className="flex gap-2 ">
+
+        <button className="text-sm text-start items-center flex border w-80 text-[#848D99] border-[#31363C] rounded-md py-1 px-2 gap-2 ">
+            <i className="pi pi-search text-base" />
+            <h3>Type <i className="border border-[#848D99] text-[11px] px-[3px] pb-0.5  rounded ">/</i> to search</h3>
+          </button>
+
+          <i className="text-[#31363C] text-xl">|</i>
+
+        <button className="text-xs items-center flex border text-[#848D99] border-[#31363C] rounded-md px-3 justify-center gap-4">
+          <i className="pi pi-plus font-bold" />
+          <i className="pi pi-sort-down-fill text-[8px]" />
+        </button>
+
+        <button className="text-sm font-light items-center flex border text-[#848D99] border-[#31363C] rounded-md p-2 justify-center ">
+            <i className="fa-regular fa-circle-dot" />
+          </button>
+
+        <button className="text-sm font-light items-center flex border text-[#848D99] border-[#31363C] rounded-md p-2 justify-center ">
+            <i className="fa-solid fa-code-pull-request" />
+          </button>
+
+       {/* <InboxButton /> */}
+       <Button className="text-base items-center flex border text-[#848D99] border-[#31363C] !rounded-md p-2 justify-center " tooltip="Enter your username" tooltipOptions={{ position: 'bottom' }}>
+            <i className="pi pi-inbox" />
+          </Button>
+
         </div>
       </div>
-    </>
+      <div className="bg-[#010508] flex px-3 text-[#E7ECF3]">
+
+        <a href="" className="hover:border-b-2 border-[#C46F5A]"><i className={`pi pi-user ${Iconstyles}`} />Overview</a>
+        <a href="" className="hover:border-b-2 border-[#C46F5A]"><i className={`pi pi-address-book ${Iconstyles}`} />Abouts</a>
+        <a href="" className="hover:border-b-2 border-[#C46F5A]"><i className={`pi pi-box ${Iconstyles}`} />Projects</a>
+      </div>
+    </div>
   );
 }
 
