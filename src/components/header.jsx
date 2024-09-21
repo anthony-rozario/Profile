@@ -43,9 +43,9 @@ function Header() {
           </button>
 
        {/* <InboxButton /> */}
-       <Button className="text-base items-center flex border text-[#848D99] border-[#31363C] !rounded-md p-2 justify-center " tooltip="Enter your username" tooltipOptions={{ position: 'bottom' }}>
+       <button className="text-base items-center flex border text-[#848D99] border-[#31363C] !rounded-md p-2 justify-center " >
             <i className="pi pi-inbox" />
-          </Button>
+          </button>
 
         </div>
       </div>
